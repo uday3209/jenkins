@@ -2,8 +2,11 @@
 NOTE: Use Root user
 
 ### Install Java
-apt install openjdk_17_jre
+```
+apt install openjdk-17-jre
+```
 
+### Install Jenkins
 ```
 curl -fsSL https://pkg.jenkins.io/debian/jenkins.io-2023.key | sudo tee \
   /usr/share/keyrings/jenkins-keyring.asc > /dev/null
