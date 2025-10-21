@@ -19,6 +19,21 @@ apt-get update
 apt-get install jenkins
 ```
 
+### Install Jenkins on Amazon Linux
+```
+yum update –y
+wget -O /etc/yum.repos.d/jenkins.repo \
+    https://pkg.jenkins.io/redhat-stable/jenkins.repo
+rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
+yum upgrade
+yum install java-21-amazon-corretto -y
+yum install jenkins -y
+systemctl enable jenkins
+systemctl start jenkins
+systemctl status jenkins
+
+```
+
 ### Login to Jenkins using the below URL:
 
 http://ec2-instance-public-ip-address:8080
